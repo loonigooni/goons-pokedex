@@ -1,0 +1,34 @@
+body {
+    font-family: 'Orbitron', monospace, sans-serif;
+    margin: 0;
+    background-image: url('images/cartographer.png');
+    background-color: var(--bg-primary);
+    color: #2d2d2d;
+  }
+
+
+.card {
+    list-style: none;
+    padding: 3rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.card-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+.card-subtitle {
+    margin-top: 0.2rem;
+}
+
+.card-img {
+    height: 10rem;
+}
+
+#pokedex {
+    padding: 2rem 2rem 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+}
