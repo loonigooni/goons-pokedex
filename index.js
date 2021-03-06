@@ -10,9 +10,11 @@ function fetchPokemon() {
   }
   Promise.all(promises)
     .then( results => {
+      console.log(results);
     let pokemon = results.map((data) => ({
-        name: data.name,
+        name: data.species.name,
         id: data.id,
+        hp: data.stats[0].base_stat,
         image: data.sprites['front_default'],
         type: data.types.map(type => type.type.name).join(", ")
       }));
@@ -24,12 +26,21 @@ function displayPokemon(pokemon) {
   console.log(pokemon);
   let pokeCard = pokemon.map( pokemen => `
     <li class="card">
-      <img class="card-img" src="${pokemen.image}"/>
       <h2 class="card-title">${pokemen.id}. ${pokemen.name}</h2>
+      <h2 class="card-hp">HP ${pokemen.hp}</h2><br />
+      <img class="card-img" src="${pokemen.image}"/>
       <p class="card-subtitle">Type: ${pokemen.type}</p>
     </li>
   `).join('');
   pokedex.innerHTML = pokeCard;
 }
+
+function highlightCard() {
+  $('#form').submit(event => {
+    event.preventDefault();
+    let searchResult = $('input[type="text"]').val()
+  });
+}
+
  
 fetchPokemon();
