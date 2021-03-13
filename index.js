@@ -4,7 +4,7 @@ var loading = true;
 
 function fetchPokemon() {
   let promises = [];
-  let maxPokemon = 151;
+  let maxPokemon = 898;
   //loop through all 898 pokemon and push into promise array
   for (let i = 1; i <= maxPokemon; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;

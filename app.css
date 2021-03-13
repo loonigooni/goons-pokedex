@@ -15,6 +15,11 @@ body {
     width: 70%;
 }
 
+#progressBar {
+    font-size: 2rem;
+    text-align: center;
+}
+
 #form {
     padding-top: 1rem;
     text-align: center;
@@ -87,8 +92,11 @@ body {
 }
 
 .highlight {
-    border: 7px solid #1cbdee;
+    border: .32rem outset #1cbdee;
+    background-color: #d5edf1;
+    border-radius: 1rem;
 }
+
 
 #pokedex {
     padding: 1rem 1rem 0 1rem;
