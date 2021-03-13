@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="container">
 
         <div>
@@ -20,8 +21,11 @@
 
         <form id="form">
             <input type="text" name="search" id="search" required>
-            <input type="submit" value="Search">
+            <input type="submit" value="Search" class="search-btn">
         </form>
+        <div id="progressBar">
+            <p>loading</p>
+        </div>
 
         <section class="section">
             <div class="results">
@@ -33,6 +37,7 @@
 
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>
