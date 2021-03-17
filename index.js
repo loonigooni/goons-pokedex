@@ -77,10 +77,10 @@ function displayPokemon(pokemon) {
 
 function loader() {
   if (loading) {
-    $('#progressBar').show()
+    $('.loader').show()
   }
   else {
-    $('#progressBar').hide()
+    $('.loader').hide()
   }
   console.log(loading);
 }

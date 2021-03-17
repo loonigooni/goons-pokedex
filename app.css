@@ -15,9 +15,27 @@ body {
     width: 70%;
 }
 
-#progressBar {
+.loader {
     font-size: 1.5rem;
     text-align: center;
+    margin: 30px 0 0 0;
+    padding: 30px 0 0 0;
+}
+
+.loader::after {
+    margin-top: 10px ;
+    padding-top: 10px;
+    display: inline-block;
+    content: '...';
+    overflow: hidden;
+    animation: dots steps(21, end) 1s infinite;
+    width: 0px;
+}
+
+@keyframes dots {
+    to {
+        width: 30px;
+    }
 }
 
 #form {
