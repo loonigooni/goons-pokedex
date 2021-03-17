@@ -4,7 +4,7 @@ var loading = true;
 
 function fetchPokemon() {
   let promises = [];
-  let maxPokemon = 494;
+  let maxPokemon = 10;
   //loop through all 898 pokemon and push into promise array
   for (let i = 1; i <= maxPokemon; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
@@ -45,12 +45,12 @@ function fetchPokemon() {
 
         // console.log(pokeName);
         // console.log("pokeList", pokeList);
-        autoCompletePokemon(pokeName);
         displayPokemon(pokeList);
       }
     });
     loading = false;
     loader();
+    autoCompletePokemon(pokeName);
     console.log('hello', loading);
   });
 }
@@ -99,9 +99,14 @@ function searchPokemon() {
 }
 
 function autoCompletePokemon(list) {
+  console.log('autocomplete');
   $('#search').autocomplete({
-    source: list
-  });
+    source: list,
+    minLength: 3
+  })
+  $(".ui-menu").appendTo("#form");
+  // $( ".ui-menu" ).wrap( "<div class='auto-results'></div>" );
+;
 
 }
 loader();
