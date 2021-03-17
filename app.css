@@ -46,10 +46,6 @@ body {
     align-items: center;
 }
 
-#search {
-    border-radius: 1rem;
-}
-
 .search-btn {
     background-color: white;
 }
